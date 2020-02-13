@@ -1,0 +1,25 @@
+body {
+  margin: 20px;
+  padding: 0;
+  background: #333;
+}
+
+/* style for parent container which holds all imgs */
+.container {
+  max-width: 760px;
+  margin: auto;
+  border: #fff solid 3px;
+  background: #fff;
+}
+
+/* fits this img 100% to the width of it's parent container (760px) */
+.main-img img,
+.imgs img {
+  width: 100%;
+}
+
+.imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /*repeat columns 4 times at width 1fr*/
+  grid-gap: 5px;
+}
