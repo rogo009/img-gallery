@@ -1,5 +1,5 @@
 const current = document.querySelector("#current");
-const imgs = document.querySelectorAll(".imgs");
+const imgs = document.querySelectorAll(".imgs img");
 const opacity = 0.4;
 
 // loop through each img and add event listener onto each img
@@ -10,11 +10,12 @@ const opacity = 0.4;
 
 // target const imgs use forEach array method to attach a addEventListener to each img which listens for a click and assigns the current src attr to the clicked target which is why you need an event / event.target
 
-imgs.forEach(img =>
-  img.addEventListener("click", e => (current.src = e.target.src))
-);
+imgs.forEach(img => img.addEventListener("click", imgClick));
 
 function imgClick(e) {
+  // reset opacity
+  imgs.forEach(img => (img.style.opacity = 1));
+
   // change current img to src of clicked img
   current.src = e.target.src;
 
