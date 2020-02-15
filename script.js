@@ -12,3 +12,7 @@ const imgs = document.querySelectorAll(".imgs");
 imgs.forEach(img =>
   img.addEventListener("click", e => (current.src = e.target.src))
 );
+
+function imgClick(e) {
+  current.src = e.target.src;
+}
