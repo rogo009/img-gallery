@@ -1,5 +1,6 @@
 const current = document.querySelector("#current");
 const imgs = document.querySelectorAll(".imgs");
+const opacity = 0.4;
 
 // loop through each img and add event listener onto each img
 
@@ -14,5 +15,9 @@ imgs.forEach(img =>
 );
 
 function imgClick(e) {
+  // change current img to src of clicked img
   current.src = e.target.src;
+
+  // change opacity to opacity var
+  e.target.style.opacity = opacity;
 }
