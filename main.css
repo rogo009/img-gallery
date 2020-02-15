@@ -4,6 +4,10 @@ body {
   background: #333;
 }
 
+h1 {
+  color: #fff;
+}
+
 /* style for parent container which holds all imgs */
 .container {
   max-width: 800px;
@@ -27,4 +31,17 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /*repeat columns 4 times at width 1fr*/
   grid-gap: 10px;
+}
+
+/* fade in animation
+forwards is the fill mode property*/
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in 1 forwards;
 }
